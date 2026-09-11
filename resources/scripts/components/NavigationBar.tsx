@@ -52,11 +52,10 @@ export default () => {
                 <div id={'logo'} className={'flex-1'}>
                     <Link
                         to={'/'}
-                        className={
-                            'text-2xl font-header font-medium px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
-                        }
+                        className={'flex items-center gap-x-2 text-2xl font-header font-medium px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'}
                     >
-                        {name}
+                        <img src={'/assets/svgs/pterodactyl.svg'} alt={'NxDactyl'} className={'w-8 h-8 object-contain'} />
+                        <span>{name || 'Nx Panel'}</span>
                     </Link>
                 </div>
                 <RightNavigation className={'flex h-full items-center justify-center'}>
