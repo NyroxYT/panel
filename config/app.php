@@ -6,8 +6,8 @@ return [
     |--------------------------------------------------------------------------
     | Application Version
     |--------------------------------------------------------------------------
-    | This value is set when creating a Pterodactyl release. You should not
-    | change this value if you are not maintaining your own internal versions.
+    | This value is set when creating a release. You should not change this
+    | value if you are not maintaining your own internal versions.
     */
 
     'version' => 'canary',
@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Pterodactyl'),
+    'name' => env('APP_NAME', 'Nx Panel'),
 
     /*
     |--------------------------------------------------------------------------
