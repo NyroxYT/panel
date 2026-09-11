@@ -1,6 +1,6 @@
 {
-    "name": "pterodactyl/panel",
-    "description": "The free, open-source game management panel. Supporting Minecraft, Spigot, BungeeCord, and SRCDS servers.",
+    "name": "nxdactyl/panel",
+    "description": "Nx Panel — a free, open-source game server management panel.",
     "license": "MIT",
     "authors": [
         {
