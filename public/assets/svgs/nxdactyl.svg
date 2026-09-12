@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">NxDactyl</title>
+  <desc id="desc">NxDactyl blue dragon gaming logo</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020611"/><stop offset=".55" stop-color="#04183d"/><stop offset="1" stop-color="#00030a"/></linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16e5ff"/><stop offset=".45" stop-color="#148cff"/><stop offset="1" stop-color="#1747ff"/></linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#9fb7d9"/><stop offset="1" stop-color="#eaf4ff"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <path d="M45 238 92 128l78-52-27 77 65-52 48-37 48 37 65-25-27 77 78-25 47 110-58-34 21 88-73-42-26 64-75-51-75 51-26-64-73 42 21-88-58 34z" fill="#020814" stroke="url(#ice)" stroke-width="7" filter="url(#glow)"/>
+  <path d="m256 105-37 61 13 36-28 28 52 61 52-61-28-28 13-36z" fill="#07152f" stroke="url(#ice)" stroke-width="6"/>
+  <path d="m256 115 17 56 64-28-31 49 59 11-73 16-36 57-36-57-73-16 59-11-31-49 64 28z" fill="#0a1b3d" stroke="#1bbcff" stroke-width="4"/>
+  <path d="m287 158 49-27-17 48 35 16-53-1-31 26 12-34z" fill="url(#silver)"/>
+  <circle cx="310" cy="167" r="7" fill="#5ff4ff" filter="url(#glow)"/>
+  <path d="m137 334 57-33 44 26 18-15 18 15 44-26 57 33-30 57-53-18-36 31-36-31-53 18z" fill="#030812" stroke="url(#ice)" stroke-width="6"/>
+  <text x="256" y="365" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="900" font-style="italic" letter-spacing="-3" fill="url(#ice)" stroke="#041027" stroke-width="3" paint-order="stroke">NX</text>
+  <text x="256" y="421" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="900" font-style="italic" letter-spacing="2" fill="url(#silver)" stroke="#07152f" stroke-width="3" paint-order="stroke">DACTYL</text>
+</svg>
