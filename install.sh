@@ -35,7 +35,12 @@ if ! command -v node >/dev/null || [[ "$(node -p 'parseInt(process.versions.node
   curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
   apt-get install -y nodejs
 fi
-npm install -g yarn@1.22.22
+if ! command -v yarn >/dev/null 2>&1; then
+  npm install -g yarn@1.22.22 --force
+else
+  log "Yarn already available: $(yarn --version)"
+fi
+command -v yarn >/dev/null 2>&1 || die 'Yarn installation failed.'
 command -v docker >/dev/null || curl -fsSL https://get.docker.com | sh
 systemctl enable --now docker redis-server nginx
 
