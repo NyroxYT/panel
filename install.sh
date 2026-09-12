@@ -64,7 +64,8 @@ yarn install --frozen-lockfile --non-interactive
 yarn run build:production
 php artisan storage:link || true
 
-log 'Create the first Nx Panel administrator now.'nphp artisan p:user:make --admin
+log 'Create the first Nx Panel administrator now.'
+php artisan p:user:make --admin
 
 SOCK=$(find /run/php -maxdepth 1 -type s -name 'php*-fpm.sock' | sort -V | tail -1)
 [[ -n "$SOCK" ]] || die 'PHP-FPM socket not found.'
