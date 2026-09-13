@@ -1,0 +1,1 @@
+Use the SVG masters in `public/assets/logos/` and `public/favicons/` to generate PNG/JPG/ICO variants during deployment. The repo intentionally keeps SVG masters as the canonical source to avoid binary drift.
