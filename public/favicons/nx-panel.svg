@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Nx Panel</title>
-  <desc id="desc">Nx Panel monogram favicon</desc>
-  <defs>
-    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8b5cf6"/>
-      <stop offset="1" stop-color="#2563eb"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="#0b1020"/>
-  <path d="M16 46V18h8l16 18V18h8v28h-8L24 28v18z" fill="url(#g)"/>
-  <path d="M41 16h9v9h-9z" fill="#fff" opacity=".95"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc"><title id="title">Nx Panel</title><desc id="desc">Nx Panel favicon</desc><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b18"/><stop offset="1" stop-color="#121a38"/></linearGradient><linearGradient id="g" x1="95" y1="90" x2="420" y2="420" gradientUnits="userSpaceOnUse"><stop stop-color="#c084fc"/><stop offset=".48" stop-color="#7c3aed"/><stop offset="1" stop-color="#22d3ee"/></linearGradient><filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)" stroke="#334155" stroke-width="3"/><circle cx="256" cy="256" r="185" fill="#7c3aed" opacity=".08"/><g filter="url(#glow)"><path d="M92 382 122 138l78-38 53 88 67-121 93-38-81 198 99 117-124-2-61-86-42 86z" fill="url(#g)"/><path d="m173 150 80 116 81-146 65-25-85 191-101-2-77-104z" fill="#091027" opacity=".36"/></g><path d="M342 92h78v78h-78z" fill="#fff" opacity=".95"/></svg>
