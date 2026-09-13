@@ -97,7 +97,7 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
                 </BrandPanel>
                 <FormPanel>
                     <div css={tw`mb-7`}>
-                        <div css={tw`text-xs font-semibold uppercase tracking-widest text-violet-500 mb-2`}>Welcome back</div>
+                        <div css={tw`text-xs font-semibold uppercase tracking-widest text-purple-500 mb-2`}>Welcome back</div>
                         {title && <h2 css={tw`text-3xl text-gray-900 font-bold tracking-tight`}>{title}</h2>}
                         <p css={tw`text-sm text-gray-500 mt-2`}>Sign in to manage your servers and infrastructure.</p>
                     </div>
