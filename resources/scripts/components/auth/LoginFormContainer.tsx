@@ -92,20 +92,20 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
                             css={tw`block w-32 lg:w-40 h-auto mb-5`}
                         />
                         <div css={tw`text-white text-xl font-semibold tracking-tight`}>Nx Panel</div>
-                        <div css={tw`text-slate-400 text-xs mt-2 tracking-wide uppercase`}>Game server control</div>
+                        <div css={tw`text-gray-400 text-xs mt-2 tracking-wide uppercase`}>Game server control</div>
                     </div>
                 </BrandPanel>
                 <FormPanel>
                     <div css={tw`mb-7`}>
                         <div css={tw`text-xs font-semibold uppercase tracking-widest text-violet-500 mb-2`}>Welcome back</div>
-                        {title && <h2 css={tw`text-3xl text-slate-900 font-bold tracking-tight`}>{title}</h2>}
-                        <p css={tw`text-sm text-slate-500 mt-2`}>Sign in to manage your servers and infrastructure.</p>
+                        {title && <h2 css={tw`text-3xl text-gray-900 font-bold tracking-tight`}>{title}</h2>}
+                        <p css={tw`text-sm text-gray-500 mt-2`}>Sign in to manage your servers and infrastructure.</p>
                     </div>
                     {props.children}
                 </FormPanel>
             </LoginCard>
         </Form>
-        <p css={tw`text-center text-slate-500 text-xs mt-5`}>
+        <p css={tw`text-center text-gray-500 text-xs mt-5`}>
             &copy; 2015 - {new Date().getFullYear()}&nbsp;
             <span> Nx Panel · NXDactyl </span>
         </p>
