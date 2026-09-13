@@ -1,0 +1,67 @@
+
+                                                                           
+                        APPLICATION IN PRODUCTION.                         
+                                                                           
+[?25l
+[90m ┌[39m [36mAre you sure you want to run this command?[39m [90m──────────────────┐[39m
+[90m │[39m [2m○ Yes /[22m [32m●[39m No                                                 [90m│[39m
+[90m └──────────────────────────────────────────────────────────────┘[39m
+
+[1G[5A[J
+[90m ┌[39m [36mAre you sure you want to run this command?[39m [90m──────────────────┐[39m
+[90m │[39m [32m●[39m Yes [2m/ ○ No[22m                                                 [90m│[39m
+[90m └──────────────────────────────────────────────────────────────┘[39m
+
+[1G[5A[J
+[90m ┌[39m [2mAre you sure you want to run this command?[22m [90m──────────────────┐[39m
+[90m │[39m Yes                                                          [90m│[39m
+[90m └──────────────────────────────────────────────────────────────┘[39m
+
+[?25h   INFO  Running migrations.  
+
+  2026_09_13_163336_make_external_id_nullable_on_users_table  0.84ms FAIL
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000]: General error: 1 table users_new already exists (Connection: sqlite, Database: /workspaces/panel/database/database.sqlite, SQL: 
+            CREATE TABLE users_new (
+                id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                uuid VARCHAR NOT NULL,
+                email VARCHAR NOT NULL,
+                password TEXT NOT NULL,
+                remember_token VARCHAR NULL,
+                language VARCHAR NOT NULL DEFAULT 'en',
+                root_admin INTEGER NOT NULL DEFAULT '0',
+                use_totp INTEGER NOT NULL,
+                totp_secret TEXT NULL,
+                created_at DATETIME NULL,
+                updated_at DATETIME NULL,
+                name_first VARCHAR NULL,
+                name_last VARCHAR NULL,
+                username VARCHAR NOT NULL,
+                gravatar TINYINT(1) NOT NULL DEFAULT '1',
+                external_id VARCHAR NULL,
+                totp_authenticated_at DATETIME NULL
+            )
+        )
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:838
+    834▕             $exceptionType = $this->isUniqueConstraintError($e)
+    835▕                 ? UniqueConstraintViolationException::class
+    836▕                 : QueryException::class;
+    837▕ 
+  ➜ 838▕             throw new $exceptionType(
+    839▕                 $this->getNameWithReadWriteType(),
+    840▕                 $query,
+    841▕                 $this->prepareBindings($bindings),
+    842▕                 $e,
+
+      [2m+7 vendor frames [22m
+
+  8   database/migrations/2026_09_13_163336_make_external_id_nullable_on_users_table.php:16
+      Illuminate\Support\Facades\Facade::__callStatic()
+      [2m+25 vendor frames [22m
+
+  34  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

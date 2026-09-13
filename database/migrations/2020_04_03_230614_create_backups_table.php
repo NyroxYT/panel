@@ -13,18 +13,49 @@ class CreateBackupsTable extends Migration
     public function up(): void
     {
         $db = config('database.default');
-        // There exists a backups plugin for the 0.7 version of the Panel. However, it didn't properly
-        // namespace itself so now we have to deal with these tables being in the way of tables we're trying
-        // to use. For now, just rename them to maintain the data.
-        $results = DB::select('SELECT TABLE_NAME FROM information_schema.tables WHERE table_schema = ? AND table_name LIKE ? AND table_name NOT LIKE \'%_plugin_bak\'', [
-            config("database.connections.{$db}.database"),
-            'backup%',
-        ]);
 
-        // Take any of the results, most likely "backups" and "backup_logs" and rename them to have a
-        // suffix so data isn't completely lost, but they're no longer in the way of this migration...
-        foreach ($results as $result) {
-            Schema::rename($result->TABLE_NAME, $result->TABLE_NAME . '_plugin_bak');
+        // SQLite does not have information_schema.
+        // Use sqlite_master to find old backup plugin tables.
+        if ($db === 'sqlite') {
+            $results = DB::select(
+                "SELECT name
+                 FROM sqlite_master
+                 WHERE type = 'table'
+                 AND name LIKE 'backup%'
+                 AND name NOT LIKE '%_plugin_bak'"
+            );
+
+            foreach ($results as $result) {
+                $tableName = $result->name;
+
+                // Do not rename the table we're about to create.
+                if ($tableName !== 'backups') {
+                    Schema::rename(
+                        $tableName,
+                        $tableName . '_plugin_bak'
+                    );
+                }
+            }
+        } else {
+            // MySQL / MariaDB
+            $results = DB::select(
+                'SELECT TABLE_NAME
+                 FROM information_schema.tables
+                 WHERE table_schema = ?
+                 AND table_name LIKE ?
+                 AND table_name NOT LIKE \'%_plugin_bak\'',
+                [
+                    config("database.connections.{$db}.database"),
+                    'backup%',
+                ]
+            );
+
+            foreach ($results as $result) {
+                Schema::rename(
+                    $result->TABLE_NAME,
+                    $result->TABLE_NAME . '_plugin_bak'
+                );
+            }
         }
 
         Schema::create('backups', function (Blueprint $table) {
@@ -41,7 +72,10 @@ class CreateBackupsTable extends Migration
             $table->softDeletes();
 
             $table->unique('uuid');
-            $table->foreign('server_id')->references('id')->on('servers')->onDelete('cascade');
+            $table->foreign('server_id')
+                ->references('id')
+                ->on('servers')
+                ->onDelete('cascade');
         });
     }
 

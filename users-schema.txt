@@ -1,0 +1,138 @@
+array:17 [
+  0 => {#6987
+    +"cid": 0
+    +"name": "id"
+    +"type": "INTEGER"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 1
+  }
+  1 => {#6984
+    +"cid": 1
+    +"name": "uuid"
+    +"type": "varchar"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  2 => {#6983
+    +"cid": 2
+    +"name": "email"
+    +"type": "varchar"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  3 => {#6982
+    +"cid": 3
+    +"name": "password"
+    +"type": "TEXT"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  4 => {#6981
+    +"cid": 4
+    +"name": "remember_token"
+    +"type": "varchar"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  5 => {#6980
+    +"cid": 5
+    +"name": "language"
+    +"type": "varchar"
+    +"notnull": 1
+    +"dflt_value": "'en'"
+    +"pk": 0
+  }
+  6 => {#6988
+    +"cid": 6
+    +"name": "root_admin"
+    +"type": "INTEGER"
+    +"notnull": 1
+    +"dflt_value": "'0'"
+    +"pk": 0
+  }
+  7 => {#6989
+    +"cid": 7
+    +"name": "use_totp"
+    +"type": "INTEGER"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  8 => {#6965
+    +"cid": 8
+    +"name": "totp_secret"
+    +"type": "TEXT"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  9 => {#6990
+    +"cid": 9
+    +"name": "created_at"
+    +"type": "datetime"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  10 => {#6991
+    +"cid": 10
+    +"name": "updated_at"
+    +"type": "datetime"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  11 => {#6992
+    +"cid": 11
+    +"name": "name_first"
+    +"type": "varchar"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  12 => {#6993
+    +"cid": 12
+    +"name": "name_last"
+    +"type": "varchar"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+  13 => {#6994
+    +"cid": 13
+    +"name": "username"
+    +"type": "varchar"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  14 => {#6995
+    +"cid": 14
+    +"name": "gravatar"
+    +"type": "tinyint(1)"
+    +"notnull": 1
+    +"dflt_value": "'1'"
+    +"pk": 0
+  }
+  15 => {#6996
+    +"cid": 15
+    +"name": "external_id"
+    +"type": "varchar"
+    +"notnull": 1
+    +"dflt_value": null
+    +"pk": 0
+  }
+  16 => {#6997
+    +"cid": 16
+    +"name": "totp_authenticated_at"
+    +"type": "datetime"
+    +"notnull": 0
+    +"dflt_value": null
+    +"pk": 0
+  }
+] // vendor/psy/psysh/src/ExecutionClosure.php(41) : eval()'d code:1
