@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ config('app.name', 'Pterodactyl') }} - @yield('title')</title>
+        <title>{{ config('app.name', 'Nx Panel') }} - @yield('title')</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="_token" content="{{ csrf_token() }}">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/svg+xml" href="/favicons/nx-panel.svg">
         <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/favicons/manifest.json">
-        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#8b5cf6">
         <link rel="shortcut icon" href="/favicons/favicon.ico">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#0e4688">
+        <meta name="theme-color" content="#0b1020">
 
         @include('layouts.scripts')
 
@@ -29,6 +30,109 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
+            <style>
+                :root {
+                    --nx-bg: #f4f6fb;
+                    --nx-dark: #0b1020;
+                    --nx-dark-2: #11182b;
+                    --nx-accent: #8b5cf6;
+                    --nx-accent-2: #2563eb;
+                    --nx-border: rgba(15, 23, 42, .08);
+                }
+
+                body.skin-blue {
+                    background: var(--nx-bg);
+                }
+
+                body.skin-blue .main-header .logo {
+                    background: linear-gradient(135deg, var(--nx-dark), var(--nx-dark-2)) !important;
+                    color: #fff !important;
+                    border: 0 !important;
+                    font-weight: 700;
+                    letter-spacing: -.02em;
+                }
+
+                body.skin-blue .main-header .navbar {
+                    background: rgba(255, 255, 255, .92) !important;
+                    border: 0 !important;
+                    box-shadow: 0 1px 0 var(--nx-border), 0 10px 30px rgba(15, 23, 42, .05);
+                }
+
+                body.skin-blue .main-header .navbar .sidebar-toggle {
+                    color: #475569 !important;
+                }
+
+                body.skin-blue .main-sidebar {
+                    background: linear-gradient(180deg, #0b1020 0%, #11182b 100%) !important;
+                    box-shadow: 12px 0 40px rgba(15, 23, 42, .12);
+                }
+
+                body.skin-blue .sidebar-menu > li.header {
+                    color: #64748b !important;
+                    font-size: 10px;
+                    letter-spacing: .14em;
+                    padding-left: 18px;
+                }
+
+                body.skin-blue .sidebar-menu > li > a {
+                    color: #cbd5e1 !important;
+                    border-left: 3px solid transparent;
+                    margin: 3px 10px;
+                    border-radius: 10px;
+                    transition: background .18s ease, color .18s ease, transform .18s ease;
+                }
+
+                body.skin-blue .sidebar-menu > li:hover > a,
+                body.skin-blue .sidebar-menu > li.active > a {
+                    color: #fff !important;
+                    background: linear-gradient(90deg, rgba(139, 92, 246, .20), rgba(37, 99, 235, .10)) !important;
+                    border-left-color: var(--nx-accent);
+                    transform: translateX(2px);
+                }
+
+                body.skin-blue .content-wrapper,
+                body.skin-blue .right-side {
+                    background: var(--nx-bg) !important;
+                }
+
+                body.skin-blue .content-header {
+                    padding: 22px 22px 8px;
+                }
+
+                body.skin-blue .content {
+                    padding: 12px 22px 28px;
+                }
+
+                body.skin-blue .box,
+                body.skin-blue .small-box,
+                body.skin-blue .info-box,
+                body.skin-blue .panel {
+                    border: 1px solid var(--nx-border) !important;
+                    border-radius: 14px !important;
+                    box-shadow: 0 12px 35px rgba(15, 23, 42, .07) !important;
+                    overflow: hidden;
+                }
+
+                body.skin-blue .box-header,
+                body.skin-blue .box-footer {
+                    border-color: var(--nx-border) !important;
+                }
+
+                body.skin-blue .main-footer {
+                    background: rgba(255, 255, 255, .82) !important;
+                    border-top: 1px solid var(--nx-border) !important;
+                    color: #64748b !important;
+                }
+
+                body.skin-blue .main-footer a {
+                    color: var(--nx-accent) !important;
+                }
+
+                body.skin-blue .navbar-nav > .user-menu > a {
+                    color: #334155 !important;
+                }
+            </style>
+
             <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -39,7 +143,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                    <span>{{ config('app.name', 'Pterodactyl') }}</span>
+                    <span>{{ config('app.name', 'Nx Panel') }}</span>
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -159,7 +263,7 @@
                     <strong><i class="fa fa-fw {{ $appIsGit ? 'fa-git-square' : 'fa-code-fork' }}"></i></strong> {{ $appVersion }}<br />
                     <strong><i class="fa fa-fw fa-clock-o"></i></strong> {{ round(microtime(true) - LARAVEL_START, 3) }}s
                 </div>
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/">Pterodactyl Software</a>.
+                Nx Panel &copy; 2015 - {{ date('Y') }} · Based on Pterodactyl Software.
             </footer>
         </div>
         @section('footer-scripts')
