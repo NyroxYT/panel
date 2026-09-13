@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Nx Panel</title>
+  <desc id="desc">Nx Panel monogram favicon</desc>
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0b1020"/>
+  <path d="M16 46V18h8l16 18V18h8v28h-8L24 28v18z" fill="url(#g)"/>
+  <path d="M41 16h9v9h-9z" fill="#fff" opacity=".95"/>
+</svg>
